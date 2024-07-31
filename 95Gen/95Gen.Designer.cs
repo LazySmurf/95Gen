@@ -159,6 +159,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Windows 95 PID Creator";
             TopMost = true;
+            Load += Main_Load;
             ((System.ComponentModel.ISupportInitialize)OKButton).EndInit();
             ((System.ComponentModel.ISupportInitialize)WindowExitBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)TitleBar).EndInit();

@@ -6,6 +6,10 @@ namespace _95Gen
         {
             InitializeComponent();
         }
+        private void Main_Load(object sender, EventArgs e)
+        {
+            WindowTitle.Text = Text;
+        }
 
         private void WindowExitBox_Click(object sender, EventArgs e)
         {
@@ -57,10 +61,10 @@ namespace _95Gen
             //First, generate the number between 1 and 366
             int first3 = random.Next(1, 367);
             //Next, pick the number between 95 and 02
-            int next2 = random.Next(0,8);
+            int next2 = random.Next(0, 8);
             string[] OEMyear = { "95", "96", "97", "98", "99", "00", "01", "02" };
             //Then, generate the 5 digit number for the end
-            int last5 = random.Next(10000, 100000);            
+            int last5 = random.Next(10000, 100000);
 
             //To create the PID, we will concat the first 3 numbers and the next 2 together
             PID += first3;
@@ -78,7 +82,7 @@ namespace _95Gen
             return PID;
         }
 
-        static string Create_Retail_PID() 
+        static string Create_Retail_PID()
         {
             //Create the string we will store the final PID in before returning
             string PID = string.Empty;
@@ -117,7 +121,8 @@ namespace _95Gen
                 {
                     digits[0] = 0;
                 }
-                else {
+                else
+                {
                     digits[i] = random.Next(0, 10);
                     sum += digits[i];
                 }
@@ -146,9 +151,9 @@ namespace _95Gen
 
 
 
-         //===============================\\
+        //===============================\\
         // Handle Dragging Borderless Form \\
-       //===================================\\
+        //===================================\\
 
         private int X1; // These 3 variables are defined here for use with the following functions
         private int Y1; // to allow dragging of the borderless form!
