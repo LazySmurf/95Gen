@@ -2,14 +2,50 @@ namespace _95Gen
 {
     public partial class Main : Form
     {
-        public Main()
+        private readonly string[]? args = null;
+        public Main(string[] progargs)
         {
+            args = progargs;
             InitializeComponent();
         }
         private void Main_Load(object sender, EventArgs e)
         {
             WindowTitle.Text = Text;
             Retail_PID.Checked = true;
+
+            if (args != null && args.Length > 0) //If any args exist
+            {
+                //If the -createRetail argument is set, the app will automatically create a retail product ID when launched
+                if (args.Contains<string>("-createRetail") && !args.Contains<string>("-createOEM"))
+                {
+                    Retail_PID.Checked = true;
+                    OKButton_Click(sender, e);
+                    //If the -copy flag is set as well, the automatically created product ID will also be copied to clipboard
+                    if (args.Contains<string>("-copy"))
+                    {
+                        Clipboard.SetText(PIDLabel.Text);
+                    }
+                }
+
+                //If the -createOEM argument is set, the app will automatically create an OEM product ID when launched
+                if (args.Contains<string>("-createOEM") && !args.Contains<string>("-createRetail"))
+                {
+                    OEM_PID.Checked = true;
+                    OKButton_Click(sender, e);
+                    //If the -copy flag is set as well, the automatically created product ID will also be copied to clipboard
+                    if (args.Contains<string>("-copy"))
+                    {
+                        Clipboard.SetText(PIDLabel.Text);
+                    }
+                }
+                //Note: Both of the key type arguments cannot be set at the same time (for hopefully obvious reasons)
+
+                //If the -notTopmost flag is set, the application will not start always on top as it normally does.
+                if (args.Contains<string>("-notTopmost"))
+                {
+                    TopMost = false;
+                }
+            }
         }
 
         private void WindowExitBox_Click(object sender, EventArgs e)

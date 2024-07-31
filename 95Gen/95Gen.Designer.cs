@@ -49,31 +49,31 @@
             PIDLabel.Name = "PIDLabel";
             PIDLabel.Size = new Size(284, 17);
             PIDLabel.TabIndex = 0;
-            PIDLabel.Text = "Click OK To Create PID";
+            PIDLabel.Text = "Click OK To Create Product ID";
             PIDLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // OEM_PID
             // 
             OEM_PID.AutoSize = true;
             OEM_PID.Font = new Font("Microsoft Sans Serif", 8.25F);
-            OEM_PID.Location = new Point(117, 60);
+            OEM_PID.Location = new Point(103, 60);
             OEM_PID.Name = "OEM_PID";
-            OEM_PID.Size = new Size(70, 17);
+            OEM_PID.Size = new Size(103, 17);
             OEM_PID.TabIndex = 2;
             OEM_PID.TabStop = true;
-            OEM_PID.Text = "OEM PID";
+            OEM_PID.Text = "OEM Product ID";
             OEM_PID.UseVisualStyleBackColor = true;
             // 
             // Retail_PID
             // 
             Retail_PID.AutoSize = true;
             Retail_PID.Font = new Font("Microsoft Sans Serif", 8.25F);
-            Retail_PID.Location = new Point(117, 78);
+            Retail_PID.Location = new Point(101, 78);
             Retail_PID.Name = "Retail_PID";
-            Retail_PID.Size = new Size(73, 17);
+            Retail_PID.Size = new Size(106, 17);
             Retail_PID.TabIndex = 1;
             Retail_PID.TabStop = true;
-            Retail_PID.Text = "Retail PID";
+            Retail_PID.Text = "Retail Product ID";
             Retail_PID.UseVisualStyleBackColor = true;
             // 
             // WindowTitle
@@ -81,7 +81,7 @@
             WindowTitle.AutoSize = true;
             WindowTitle.BackColor = Color.Transparent;
             WindowTitle.ForeColor = Color.White;
-            WindowTitle.Location = new Point(6, 5);
+            WindowTitle.Location = new Point(6, 4);
             WindowTitle.Name = "WindowTitle";
             WindowTitle.Size = new Size(134, 15);
             WindowTitle.TabIndex = 3;
@@ -94,12 +94,12 @@
             CopyPIDLabel.ActiveLinkColor = Color.DarkBlue;
             CopyPIDLabel.AutoSize = true;
             CopyPIDLabel.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            CopyPIDLabel.Location = new Point(184, 132);
+            CopyPIDLabel.Location = new Point(194, 130);
             CopyPIDLabel.Name = "CopyPIDLabel";
-            CopyPIDLabel.Size = new Size(120, 13);
+            CopyPIDLabel.Size = new Size(94, 13);
             CopyPIDLabel.TabIndex = 4;
             CopyPIDLabel.TabStop = true;
-            CopyPIDLabel.Text = "Copy PID to Clipboard...";
+            CopyPIDLabel.Text = "Copy Product ID...";
             CopyPIDLabel.Visible = false;
             CopyPIDLabel.LinkClicked += CopyPIDLabel_LinkClicked;
             // 
@@ -157,7 +157,7 @@
             MinimizeBox = false;
             Name = "Main";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Windows 95 PID Creator";
+            Text = "Windows 95 Product ID Creator";
             TopMost = true;
             Load += Main_Load;
             ((System.ComponentModel.ISupportInitialize)OKButton).EndInit();
