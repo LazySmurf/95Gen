@@ -9,6 +9,7 @@ namespace _95Gen
         private void Main_Load(object sender, EventArgs e)
         {
             WindowTitle.Text = Text;
+            Retail_PID.Checked = true;
         }
 
         private void WindowExitBox_Click(object sender, EventArgs e)
